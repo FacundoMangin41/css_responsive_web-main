@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  height: 100vh; /* podría ser también como viewport (height: 100vh) */
+  display: flex;
+  flex-direction: column; /* organizar todo en columnas */
+}
+  
+/* ------- Header style ------- */
+header {
+  background: #f88;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* ------- Main style (contenido principal) ------- */
+/*
+  flex: 1 --> toma el espacio restante en altura que
+            que no toman el header y el footer
+  overflox: auto --> activar el scroll
+*/
+main {
+  flex: 1; 
+  overflow: auto;
+  height: 60px;
+  font-size: 24px;
+}
+
+section {
+  height: 100%; /* cada seccion ocupa 100% del main */
+  overflow: auto; /* recomendado para que las secciones no se superpongan */
+  border-bottom: 1px solid;
+  background: lightgreen;
+}
+  
+section:last-child {
+  border: none;
+}
+
+/* ------- Header style ------- */
+footer {
+  background: lightblue;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}

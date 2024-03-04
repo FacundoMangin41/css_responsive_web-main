@@ -1,0 +1,92 @@
+* {
+    /* se eliminan todos los margin por defecto */
+    margin: 0;
+    /* se eliminan todos los padding por defecto */
+    padding: 0; 
+    /* se elimina el estilo de las listas */
+    list-style-type: none;
+    /* el padding y border se consideran para calcular
+     el tamaño de la caja */
+    box-sizing: border-box;
+    /* se elimina el subrayado de los links <a> */
+    text-decoration: none
+  }
+
+
+body{
+    display: grid; /* Declara ante todo esta propiedad */
+    grid-template-columns: 1fr 3fr 1fr; /* Declara el tamaño de las columnas */
+    grid-template-rows: repeat(3, 1f); /* Declara el tamaño de las filas */
+    grid-template-areas: 
+        "h h h"
+        "s c ch"
+        "f f f";
+  }
+
+  header{
+    grid-area: h;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border: 4px solid black;
+  }
+
+  .sidebar{
+    grid-area: s;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border: 4px solid black;
+  }
+
+  .content{
+    grid-area: c;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    border: 4px solid black;
+  }
+
+  .chat{
+    grid-area: ch;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(119, 133, 0);
+    border: 4px solid black;
+  }
+
+  footer{
+    grid-area:f ;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+    border: 4px solid black;
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    body{
+        grid-template-columns: 1fr 3fr ; /* Declara el tamaño de las columnas */
+        grid-template-rows: repeat(4, 1f); /* Declara el tamaño de las filas */
+        grid-template-areas: 
+            "h h"
+            "s c"
+            "s ch"
+            "f f";
+      }
+
+      .sidebar{
+        height: 100vh;
+      }
+  }
+  

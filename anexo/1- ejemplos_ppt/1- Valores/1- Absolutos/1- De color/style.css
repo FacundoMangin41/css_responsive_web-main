@@ -1,0 +1,31 @@
+.palabra {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.RGBA {
+  background-color: rgba(92, 112, 181, 0.45);
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.hexadecimal {
+  color: #2ae8e2;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.gradiente {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background: linear-gradient(
+    #a40c32 10%, 
+    #9A0CA4 45%, 
+    #1A17CB 85%
+    );
+}

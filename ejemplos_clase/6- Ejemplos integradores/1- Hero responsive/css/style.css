@@ -1,0 +1,139 @@
+* {
+  /* se eliminan todos los margin por defecto */
+  margin: 0;
+  /* se eliminan todos los padding por defecto */
+  padding: 0; 
+  /* se elimina el estilo de las listas */
+  list-style-type: none;
+  /* el padding y border se consideran para calcular
+   el tamaño de la caja */
+  box-sizing: border-box;
+  /* se elimina el subrayado de los links <a> */
+  text-decoration: none
+}
+
+/* Ocupar toda la pantalla disponible */
+html, body {
+  height: 100%;
+}
+
+/* Ordenar los elementos dentro del body en columnas */
+body {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* ------- Header style ------- */
+
+header {
+  background-color: #2a2a2a;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Manipulamos el texto que se muestra en la navbar */
+#tituloNavbar {
+  font-size: 25px;
+  padding: 10px;
+  color: white;
+}
+
+/* fila de elementos del header */
+/* formado por una lista de elementos (ul) */ 
+/*
+- Alinear todos los elementos unos al lado de otros (flex-direction:row)
+- Se distrubuyen los elementos para que tomen todo el ancho de manera equitativa (justify-content space-arround)
+- Se centraron los elementos a lo alto (align-items center)
+*/
+header > nav > ul {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/* ------- Main style (contenido principal) ------- */
+main {
+  background-image: url(../images/fondo.jpg);
+  flex: 1; /* toma el espacio restante de la pantalla */
+  overflow: auto; /* activar scroll */
+}
+
+/* ------- Article style ------- */
+/*
+- Alinear todos los elementos unos encima de otros (flex-direction:column)
+- Se centraron los elementos en el eje horizontal/principal (justify-content center)
+- Se centraron los elementos en el eje vertical/secondario (align-items center)
+*/
+article {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.titulo > span {
+  font-size: 40px;
+}
+
+.titulo > p {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.descripcion {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.descripcion > p {
+  color: gray;
+}
+
+.descripcion > a {
+  text-decoration: none;
+  color: rgb(20, 101, 182);
+  font-size: 20px;
+}
+
+/* ------- Footer style ------- */
+
+footer {
+  height: 60px;
+  background-color: #2a2a2a;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+footer span {
+  color: white;
+}
+
+footer div {
+  padding: 25px;
+}
+
+footer i {
+  color: white;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  article > figure > img {
+    width: 350px;
+  }
+}
